@@ -9,7 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    // control + command + spacebar will bring up the emoji table 😎
+    var emojis = ["😎","💩","😀","👠","🐹","🐬"]
+    
     // some changes
     @IBOutlet weak var productsTableView: UITableView!
     
@@ -26,7 +28,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // how many rows in the table view
         
-        return 10
+        return emojis.count
     }
     
     
@@ -34,10 +36,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // put items in the table view row or cell
         let cell = UITableViewCell()
-    
-        cell.textLabel?.text = "😎"
-        
-        
+        cell.textLabel?.text = emojis[indexPath.row]
         return cell
     }
     
