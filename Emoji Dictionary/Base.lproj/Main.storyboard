@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fiV-ha-yqS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,13 +17,13 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Emoji_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Emoji_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pzn-wZ-jia">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -36,30 +36,44 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="VUV-yL-8YB"/>
                     <connections>
                         <outlet property="productsTableView" destination="pzn-wZ-jia" id="8DG-7S-w7w"/>
+                        <segue destination="9ow-x0-4LY" kind="show" identifier="moveSegue" id="Qnv-DY-fr2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="27"/>
+            <point key="canvasLocation" x="456.80000000000001" y="26.53673163418291"/>
         </scene>
-        <!--View Controller-->
+        <!--Definition View Controller-->
         <scene sceneID="Zcc-jO-sZi">
             <objects>
-                <viewController id="9ow-x0-4LY" sceneMemberID="viewController">
+                <viewController id="9ow-x0-4LY" customClass="DefinitionViewController" customModule="Emoji_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7me-lP-P6O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzU-Gr-UsN">
-                                <rect key="frame" x="78" y="60" width="218" height="239"/>
+                                <rect key="frame" x="78" y="104" width="218" height="239"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="200"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crown Members" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrT-iX-320">
-                                <rect key="frame" x="118" y="399" width="138.5" height="25"/>
+                                <rect key="frame" x="118" y="443" width="138.5" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creation Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARY-Qn-edq">
+                                <rect key="frame" x="132" y="533" width="111.5" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gex-r2-l9h">
+                                <rect key="frame" x="149" y="488" width="77" height="25"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -70,14 +84,42 @@
                             <constraint firstItem="AzU-Gr-UsN" firstAttribute="top" secondItem="apO-r0-Dvm" secondAttribute="top" constant="40" id="90L-OP-twl"/>
                             <constraint firstItem="jrT-iX-320" firstAttribute="top" secondItem="AzU-Gr-UsN" secondAttribute="bottom" constant="100" id="Ifu-dL-fFC"/>
                             <constraint firstItem="AzU-Gr-UsN" firstAttribute="centerX" secondItem="7me-lP-P6O" secondAttribute="centerX" id="VAv-7Q-Jyy"/>
+                            <constraint firstItem="Gex-r2-l9h" firstAttribute="centerX" secondItem="7me-lP-P6O" secondAttribute="centerX" id="hp2-HI-XGp"/>
                             <constraint firstItem="jrT-iX-320" firstAttribute="centerX" secondItem="7me-lP-P6O" secondAttribute="centerX" id="lq7-Gj-yAz"/>
+                            <constraint firstItem="ARY-Qn-edq" firstAttribute="top" secondItem="Gex-r2-l9h" secondAttribute="bottom" constant="20" id="pj1-So-ZIw"/>
+                            <constraint firstItem="ARY-Qn-edq" firstAttribute="centerX" secondItem="7me-lP-P6O" secondAttribute="centerX" id="vbN-cH-V2m"/>
+                            <constraint firstItem="Gex-r2-l9h" firstAttribute="top" secondItem="jrT-iX-320" secondAttribute="bottom" constant="20" id="zgM-BU-LwG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="apO-r0-Dvm"/>
                     </view>
+                    <connections>
+                        <outlet property="categoryLabel" destination="Gex-r2-l9h" id="UKC-Tw-WvF"/>
+                        <outlet property="creationYearLabel" destination="ARY-Qn-edq" id="dH7-rK-RyU"/>
+                        <outlet property="definitionLabel" destination="jrT-iX-320" id="gWd-aQ-l4Z"/>
+                        <outlet property="emojiLabel" destination="AzU-Gr-UsN" id="Nxc-LE-aJw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHS-4p-Vdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="812" y="28"/>
+            <point key="canvasLocation" x="1151.2" y="27.436281859070466"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GQX-la-rjG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fiV-ha-yqS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lwf-LZ-mVg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DqP-E9-uhG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gh-VN-L0f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="27"/>
         </scene>
     </scenes>
 </document>
